@@ -1,0 +1,135 @@
+/* CONTACT */
+.outer-container {
+    margin-top: 45px;
+    height: 685px;
+    background-image: url('../public/constellation.jpg');
+    color: white;
+}
+
+.new-text{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    z-index: 1;
+    font-size: 1em;
+    margin-top: -35px;
+}
+.section-contact{
+    display: flex;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.contact-subtitle {
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+    margin: 125px 0px 70px;
+    line-height: 50px;
+}
+
+.contact-box {
+    width: 24%;
+    text-align: center;
+    padding: 30px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+}
+
+.contact-box .text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+.contact-box i {
+    font-size: 60px;
+    padding-bottom: 30px;
+}
+
+.meet p {
+    color: #707070;
+    padding-top: 20px;
+    line-height: 23px;
+}
+
+.sticky .card.contact-box.email {
+    width: 35%;
+}
+
+.sticky .card {
+    transition: transform 0.3s; 
+}
+
+.sticky .card:hover {
+    transform: scale(1.2); 
+}
+
+.sticky {
+    display: flex;
+    justify-content: space-between;
+    margin: 16px 164px 10px 105px
+}
+
+.card {
+    width: 250px;
+    height: 150px;
+    background: #fbfbfb;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 20px;
+}
+.card p {
+    z-index: 1;
+    color: black; 
+    font-size: 1em;
+}
+
+.card .fcolor {
+    z-index: 1;
+    font-size: 3em;
+    margin:10px;
+}
+
+.card .text {
+    z-index: 1;
+    font-size: 1em;
+    margin-top: -15px;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    background-image: linear-gradient(180deg, rgba(42, 21, 114, 1), greenyellow);
+    height: 305%;
+    animation: rotBGimg 3s linear infinite;
+    transition: all 0.2s linear;
+}
+
+@keyframes rotBGimg {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.card::after {
+    content: '';
+    position: absolute;
+    background: WHITE;
+    inset: 5px;
+    border-radius: 15px;
+}   
+
+/* end contact */
