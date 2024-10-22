@@ -15,3 +15,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* nav bar */
+
+.violet-gradient {
+  background: linear-gradient(25deg, #b20e0e 0%, #7B1E22 100%);
+  background: -webkit-linear-gradient(25deg, #b20e0e 0%, #7B1E22 100%);
+}
+
+/* fin nav bar */
