@@ -14,7 +14,7 @@ const Navbar = () => {
         <nav className="violet-gradient fixed w-full">
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
                 <a href="/#Home" className="">
-                    <img src={logos} className="h-12" alt="Logo infinix" />
+                    <img src={logos} className="h-12" width={120} alt="Logo infinix" />
                 </a>
                 <button
                     onClick={toggleMenu}
