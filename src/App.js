@@ -6,6 +6,13 @@ const App = () => {
     <BrowserRouter>
       <div className='relative z-0 bg-white'>
         <Navbar /> 
+        <Routes>
+          <Route path="/" element={<>
+            <Home />
+            <Who />
+            <Contact />
+            </>} />
+        </Routes>
       </div>
     </BrowserRouter>
   );
