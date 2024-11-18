@@ -20,7 +20,7 @@ const Ecole = () => {
     };
 
     return (
-        <section id="Ecole" className="flex flex-col items-center">
+        <section id="Ecole" className="flex flex-col items-center" style={{ display: 'none' }}>
             <div className='i-size'>
                 <h2 className='degrade e-size text-center mt-8'>École</h2>
                     <p>L'école de développement web est un établissement spécialisé dans la conception et le développement de sites web et applications web. Elle est située à Paris, en France.</p>

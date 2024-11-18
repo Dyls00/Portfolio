@@ -4,14 +4,15 @@ import { email } from '../constants';
 const Contact = () => {
 
   return (
-  <section id="Contact">
+  <section id="Contact" style={{ display: 'none' }}>
     <div class="outer-container">
       <div class="section-contact"></div>
         <div class="contact-subtitle">
-          <h2>VOUS VOULEZ RENCONTREZ UN JEUNE TALENT ? CONTACTEZ MOI</h2><br />
+        <p className='contact-s e-size'>Contact</p>
+          <p className='contact-t'><strong className='degrade'>VOUS VOULEZ RENCO</strong>NTREZ UN JEUNE TALENT ? <strong className='degrade'>CONTACTEZ MOI</strong></p>
           Actuellement à la recherche d'une opportunité d'alternance, je suis intéressée par les postes en : <br />
         <div class="jobs">
-          <h2 className="move"> DÉVELOPPEMENT • DATA • GESTION DE PROJET </h2>
+          <p className='contact-t'> DÉVELOPPEMENT <strong className='degrade'>• DATA •</strong> GESTION DE PROJET</p>
         </div>
       </div>
 

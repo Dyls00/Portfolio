@@ -13,7 +13,7 @@ const Navbar = () => {
     <div className="header">
         <nav className="violet-gradient fixed w-full">
             <div className="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto p-4">
-                <a href="/#Home" className="">
+                <a href="/#Launcher" className="">
                     <img src={logos} className="h-12" width={120} alt="Logo infinix" />
                 </a>
                 <button

@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import { Navbar, Home, Who,Etudes,Ecole, Contact, Footer, MentionsLegales } from "./components";
+import { Navbar, Home, Who,Etudes,Ecole,Competences,Realisations, Contact, Footer, MentionsLegales } from "./components";
 
 const App = () => {
   return (
@@ -12,6 +12,8 @@ const App = () => {
             <Who />
             <Etudes />
             <Ecole />
+            <Competences />
+            <Realisations />
             <Contact />
             <Footer />
             </>} />

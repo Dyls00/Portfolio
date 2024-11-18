@@ -12,6 +12,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+section {
+  position: relative;
+  z-index: 2; /* Toutes les sections ont un niveau d'empilement par défaut */
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -25,13 +30,15 @@ code {
   background-color: rgba(255, 255, 255, 0.2); */
   background-color: #a64003;
   border-radius: 0px 0px 40px 0px;
+  border-bottom: 1px solid #ffffff !important;
   z-index: 1000;
 }
 
 /* HOME */
 
-#launcher {
-height: 100vh;
+#Launcher {
+height: auto;
+min-height: 100vh;
 border-radius: 0px 0px 75px 0px;
 background-image: url('../public/images/background.jpg');
 background-size: cover; /* Remplit la div tout en conservant le ratio de l'image */
@@ -43,7 +50,7 @@ background-repeat: no-repeat; /* Évite la répétition de l'image */
   color: white;
   width: 50%;
   position: relative;
-  left: 3%;
+  left: 2%;
 }
 
 .word-animation .prenom-1{
@@ -56,7 +63,7 @@ background-repeat: no-repeat; /* Évite la répétition de l'image */
 
 .creer, .cree{
   font-weight: 300;
-  font-size: 25px;
+  font-size: 28px;
   font-family: 'Roboto', 'Segoe UI', sans-serif;
   color: var(--color);
   margin-bottom: 15px; /* Espace entre les paragraphes */
@@ -69,6 +76,27 @@ background-repeat: no-repeat; /* Évite la répétition de l'image */
   gap: 5px;
 }
 
+.h-text{
+  font-size: 40px;
+  font-weight: 500;
+  color: white;
+}
+
+.h-text {
+  margin-bottom: 1rem; /* Ajustez la valeur en fonction de l'espace souhaité */
+}
+
+.word-animation{
+  position: relative;
+  left: 5px;
+  font-weight: 500;
+}
+
+.word-animation span {
+  margin-right: 0.8rem; /* Espace à droite de chaque `span` */
+}
+
+/* animation pour faire defiler les mots de hauts en bas
 .word-animation{
   height: 35px;
   overflow: hidden;
@@ -123,7 +151,7 @@ background-repeat: no-repeat; /* Évite la répétition de l'image */
     -webkit-transform: translateY(-400%);
     transform: translateY(-400%);
   }
-}
+}*/
 
 #navbar-default a {
   color: #fff;
@@ -151,7 +179,6 @@ background-repeat: no-repeat; /* Évite la répétition de l'image */
 
 
 /* bouton*/
-/* From Uiverse.io by nikk7007 */ 
 .btn {
   --color: #ffffff;
   --color2: rgb(10, 25, 30);
@@ -160,17 +187,20 @@ background-repeat: no-repeat; /* Évite la répétition de l'image */
   border: .3px solid var(--color);
   border-radius: 3px;
   transition: .5s;
-  position: relative;
-  left: 3%;
   overflow: hidden;
   cursor: pointer;
   z-index: 1;
   font-weight: 300;
-  font-size: 17px;
+  font-size: 10px;
   font-family: 'Roboto', 'Segoe UI', sans-serif;
   text-transform: uppercase;
   color: var(--color);
  }
+
+ .btn-a {
+  position: relative;
+  left: 2%;
+ }	
  
  .btn::after, .btn::before {
   content: '';
@@ -209,6 +239,55 @@ background-repeat: no-repeat; /* Évite la répétition de l'image */
   transform: scale(.98);
  }
 /* fin bouton */
+
+/* Animation de dégradé */
+@keyframes gradient-animation {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+/* Animation de typewriter pour le nom */
+.animate-typewriter {
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  animation: typing 2s steps(15) forwards;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+.heading {
+  font-size: 26px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 2s; /* Délai initial avant le début de l'animation */
+}
+
+.pulse {
+  font-size: 18px;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
+  animation-delay: 2s; /* Délai initial avant le début de l'animation */
+  position: relative;
+  top: 20px;
+}
+
+.heading p {
+  margin-bottom: 1rem; /* Ajustez la valeur en fonction de l'espace souhaité */
+}
+
+/* Classes de délai pour chaque ligne */
+.delay-1 { animation-delay: 3s; }
+.delay-2 { animation-delay: 4.2s; }
+.delay-3 { animation-delay: 7.4s; }
+.delay-4 { animation-delay: 8.6s; }
+.delay-5 { animation-delay: 9.8s; }
 /* FIN HOME */
 
 /* WHO */
@@ -348,15 +427,16 @@ background-repeat: no-repeat; /* Évite la répétition de l'image */
   background-image: linear-gradient(257deg, #FFFFFF 0%, #EDE7FE 100%);
   display: flex;
   flex-direction: column;
-  position: relative;
   justify-content: center;
   align-items: center;
-  top: 25%;
   border-radius: 25px 0px 0px 0px;
+  border-top: 1px solid transparent;
 }
 
 .e-box{
   width: 70%;
+  margin-left: 15%;
+  margin-top: 2%;
 }
 
 .e-col-1, .e-col-2{
@@ -378,9 +458,8 @@ background-repeat: no-repeat; /* Évite la répétition de l'image */
 }
 
 .m-class{
-  width: 90%;
-  position: relative;
-  top: 14px;
+  max-width: 90%; /* L'image ne dépassera pas les limites du conteneur */
+  height: auto;
 }
 
 .mon-text{
@@ -390,7 +469,7 @@ background-repeat: no-repeat; /* Évite la répétition de l'image */
 }
 
 .e-size{
-  font-size: 45px;
+  font-size: 35px;
 }
 
 /* FIN ETUDES */
@@ -398,7 +477,8 @@ background-repeat: no-repeat; /* Évite la répétition de l'image */
 /* ECOLE */
 
 #Ecole{
-min-height: 80vh;
+height: auto;
+min-height: 85vh;
 }
 
 .i-box{
@@ -411,25 +491,109 @@ min-height: 80vh;
 .i-size{
   width: 75%;
   font-size: 15px;
+  margin-left: 14%;
 }
 
 /* FIN ECOLE */
 
+/* COMPETENCES */
+
+#Competences{
+  height: auto;
+  min-height: 80vh;
+  background-color: transparent;
+  background-image: linear-gradient(257deg, #EDE7FE 0%, #FFFFFF 100%);
+  margin-top: 10px;
+  border-radius: 25px 20px 0px 0px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.section-title {
+  color: #333;
+  margin-bottom: 2rem;
+  position: relative;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.skills-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  justify-content: space-around;
+  gap: 1.5rem;
+}
+
+.skill {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: scale(0.9);
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.skill:hover {
+  transform: scale(1);
+  background-color: #e0e0e0;
+}
+
+.stars {
+  color: #ffd700;
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+
+
+
+/* FIN COMPETENCES */
+
+/* Realisations */
+
+#Realisations{
+  height: auto;
+  min-height: 80vh;
+  background-color: transparent;
+  background-image: linear-gradient(257deg, #FFFFFF 0%, #EDE7FE 100%);
+  margin-top: 10px;
+  border-radius: 25px 20px 0px 0px;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* FIN FACTS */
+
 /* CONTACT */
 
-#contact{
-  font-weight: 300;
-  font-size: 20px;
+#Contact{
   font-family: 'Roboto', 'Segoe UI', sans-serif;
   color: var(--color);
+  height: auto;
+  min-height: 80vh;
+  background-color: transparent;
+  background-image: linear-gradient(257deg, #a64003 0%, #ff7f2a 100%);
+  border-radius: 40px 0px 0px 0px;
 }
 
 .outer-container {
-  margin-top: 45px;
   height: 685px;
-  border-radius: 0px 40px 0px 0px;
-  background-color: transparent;
-  background-image: linear-gradient(90deg, #a64003 0%, #ff7f2a 100%);
   color: white;
 }
 
@@ -450,13 +614,21 @@ min-height: 80vh;
   display: flex;
   justify-content: center;
   font-weight: bold;
-  margin-top: 15px;
 }
 
 .contact-subtitle {
   text-align: center;
-  margin: 125px 0px 70px;
+  margin: 70px 0px 70px;
   line-height: 50px;
+}
+
+.contact-s{
+  margin-bottom: 25px;
+}
+
+.contact-t{
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
 .contact-box {

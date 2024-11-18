@@ -10,16 +10,16 @@ export const navLinks = [
         title: "Mes études",
     },
     {
-        id: "ecole",
+        id: "Ecole",
         title: "Écoles",
     },
     {
-        id: "compétences",
-        title: "Mes compétences",
+        id: "Competences",
+        title: "Compétences",
     },
     {
-        id: "ce-que-je-fais",
-        title: "Ce que je fais ?",
+        id: "Realisations",
+        title: "Mes réalisations",
     },
     {
         id: "Contact",
@@ -28,14 +28,18 @@ export const navLinks = [
 ];
 
 export const images = [
-    "/images/accueil/Estiam_CD18_02.jpg",
-    "/images/accueil/Estiam_CD18_05.jpg",
-    "/images/accueil/Estiam_CD18_12.jpg",
-    "/images/accueil/Estiam_CD18_15.jpg",
-    "/images/accueil/Estiam_CD18_17.jpg"
+    "/images/carroussel/image1.jpg",
+    "/images/carroussel/image2.jpg",
+    "/images/carroussel/image3.jpg",
+    "/images/carroussel/image4.jpg",
+    "/images/carroussel/image5.jpg",
+    "/images/carroussel/image6.jpg",
+    "/images/carroussel/image7.jpg",
+    "/images/carroussel/image8.jpg",
+    "/images/carroussel/image9.jpg"
 ];
 
-export const phoneNumber = "+33 7 00 00 00 00";
+export const phoneNumber = "+33 7 53 09 43 94";
 
 export const email = "johane-arlis.nsangouakanda@estiam.com";
 
@@ -43,17 +47,17 @@ export const footerLinks = [
     {
         title: "/ Pages",
         links: [    
-            { name: "Accueil", href: "/#Home" },
-            { name: "À propos", href: "/#Missions" },
-            { name: "Mes études", href: "/#Event" },
+            { name: "Accueil", href: "/#Launcher" },
+            { name: "À propos", href: "/#Who" },
+            { name: "Mes études", href: "/#Etudes" },
             { name: "Écoles", href: "/#Ecole" },
         ],
     },
     {
         title: "/ Pages",
         links: [
-            { name: "Mes compétences", href: "/#Presentation" },
-            { name: "Ce que je fais ?", href: "/#Ecole" },
+            { name: "Compétences", href: "/#Competences" },
+            { name: "Mes réalisations", href: "/#Realisations" },
             { name: "Contact", href: "/#Contact" },
         ],
     },

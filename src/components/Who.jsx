@@ -2,7 +2,7 @@ import image from '../assets/IMG_20231024_151031.jpg';
 const Who = () => {
 
   return (
-    <section id="Who">
+    <section id="Who" style={{ display: 'none' }}>
         <div className="ident">
           <div className="side-1">
             <img src={image} alt="Description de l'image" className="ma-class" />
