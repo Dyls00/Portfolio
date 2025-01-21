@@ -7,18 +7,17 @@ const Who = () => {
           <div className="side-1">
             <img src={image} alt="Description de l'image" className="ma-class" />
           </div>
-          <div className="side-2">
-            <h2 className='title-element'>Johane, <strong className='degrade'> étudiant en Bachelor Informatique </strong> à l'<a href="https://www.estiam.education/fr/nos-campus/bourges">ESTIAM campus de Bourges</a>, spécialisé dans la <strong className='degrade'>conception et le développement d'applications</strong>.</h2><br />
+          <div className="side-2 e-text">
+            <h2 className='title-element'>Johane, <strong className='degrade'> étudiant en Bachelor Informatique </strong> à l'<a href="https://www.estiam.education/fr/nos-campus/bourges">ESTIAM campus de Bourges</a>, spécialisé dans la <strong className='degrade'> Big data </strong> ainsi que la <strong className='degrade'>conception et le développement d'applications</strong>.</h2><br />
       
-            <p>Mon expertise s'étend sur plusieurs aspects essentiels du développement, y compris le front-end, le back-end, 
-              ainsi que les bases de données. </p><br />
+            <p>Mon expertise s'étend sur plusieurs aspects essentiels de la data, de l'IA et du développement, y compris le front-end, le back-end. </p><br />
               <p>Je cherche en permanence de nouvelles façons d'optimiser mes projets pour mieux répondre aux besoins des utilisateurs, 
                 motivé par mon intérêt pour les nouvelles technologies et l'amélioration continue.</p>
                 
-              <button class="Documents-btn" onClick="window.open('Johane_arlis_estiam.pdf')">
-                <span class="folderContainer">
+              <button className="Documents-btn" onClick={() => window.open('/documents/Johane_NSANGOUAKANDA_CV.pdf', '_blank')}>
+                <span className="folderContainer">
                   <svg
-                    class="fileBack"
+                    className="fileBack"
                     width="146"
                     height="113"
                     viewBox="0 0 146 113"
@@ -44,7 +43,7 @@ const Who = () => {
                     </defs>
                   </svg>
                   <svg
-                    class="filePage"
+                    className="filePage"
                     width="88"
                     height="99"
                     viewBox="0 0 88 99"
@@ -68,7 +67,7 @@ const Who = () => {
                   </svg>
 
                   <svg
-                    class="fileFront"
+                    className="fileFront"
                     width="160"
                     height="79"
                     viewBox="0 0 160 79"
@@ -94,7 +93,7 @@ const Who = () => {
                     </defs>
                   </svg>
                 </span>
-                <p class="text">Documents</p>
+                <p className="text">Documents</p>
               </button>
           </div>
         </div>

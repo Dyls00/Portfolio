@@ -20,12 +20,12 @@ const Ecole = () => {
     };
 
     return (
-        <section id="Ecole" className="flex flex-col items-center" style={{ display: 'none' }}>
+        <section id="Ecole" className="flex flex-col items-center e-text" style={{ display: 'none' }}>
             <div className='i-size'>
                 <h2 className='degrade e-size text-center mt-8'>École</h2>
-                    <p>L'école de développement web est un établissement spécialisé dans la conception et le développement de sites web et applications web. Elle est située à Paris, en France.</p>
-                    <p>L'école propose des formations en tant que développeur web, développeur mobile, graphiste et designer.
-                    Elle offre des cours en français, anglais et étranger, ainsi que des formations en informatique et en communication.</p>
+                <p>L'Estiam, est une école qui forme des étudiants aux métiers du numérique. 
+                    Ils proposent des cursus en développement web, data science et pleins d'autres spécialités liées à la tech. 
+                    L'école met l'accent sur les projets concrets et des stages pour que les étudiants puissent acquérir de l'expérience.</p>
             </div>
             <div className="carroussel mt-6 w-[80%] mx-auto relative">
                 <div id="controls-carousel" className="relative overflow-hidden rounded-lg">

@@ -25,12 +25,12 @@ const Home = () => {
               </p>
             <div className="heading">
                 <p className="heading delay-1">Étudiant en Bachelor Informatique,</p>
-                <p className="heading delay-2">Spécialisé en développement d'applications.</p>
-                <p className="heading delay-3">Pour en savoir plus sur mes compétences,</p>
+                <p className="heading delay-2">Spécialisé en Big data et IA.</p>
+                <p className="heading delay-3">Pour en savoir plus,</p>
                 <p className="heading delay-4">Merci de cliquer ci-dessous.</p>
             </div>
             </div>
-              <a className="btn-a" href="/#Competences"><button className="btn pulse delay-5" onClick={isOpen}>Engagez un talent étudiant</button></a>
+              <a className="btn-a" href="/#Who"><button className="btn pulse delay-5" onClick={isOpen}>Engagez un talent étudiant</button></a>
             </div>
         </section>
       );
