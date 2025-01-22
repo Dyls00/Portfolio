@@ -32,7 +32,7 @@ const Navbar = () => {
                     )}
                 </button>
                 <div className={`${isOpen ? 'block' : 'hidden'} w-full lg:block lg:w-auto`} id="navbar-default">
-                    <ul className="flex flex-col p-4 lg:p-0 mt-4 border rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 md:border-0">
+                    <ul className="flex flex-col p-4 lg:p-0 mt-4 rounded-lg lg:flex-row lg:space-x-8 rtl:space-x-reverse lg:mt-0 md:border-0">
                         {navLinks.map((link) => (
                             <li key={link.id}>
                                 <a href={`/#${link.id}`} className="block py-2 px-3 text-lg text-white hover:scale-105 transition rounded">

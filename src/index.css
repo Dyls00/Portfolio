@@ -96,63 +96,6 @@ background-repeat: no-repeat; /* Évite la répétition de l'image */
   margin-right: 0.8rem; /* Espace à droite de chaque `span` */
 }
 
-/* animation pour faire defiler les mots de hauts en bas
-.word-animation{
-  height: 35px;
-  overflow: hidden;
-  position: relative;
-  left: 5px;
-  font-weight: 500;
-}
-
-.word-animation span{
-  display: block;
-  color: rgb(255, 255, 255);
-  animation: rotateSpin 5s infinite;
-}
-
-@keyframes rotateSpin {
-  10% {
-    -webkit-transform: translateY(-102%);
-    transform: translateY(-102%);
-  }
-
-  25% {
-    -webkit-transform: translateY(-100%);
-    transform: translateY(-100%);
-  }
-
-  35% {
-    -webkit-transform: translateY(-202%);
-    transform: translateY(-202%);
-  }
-
-  50% {
-    -webkit-transform: translateY(-200%);
-    transform: translateY(-200%);
-  }
-
-  60% {
-    -webkit-transform: translateY(-302%);
-    transform: translateY(-302%);
-  }
-
-  75% {
-    -webkit-transform: translateY(-300%);
-    transform: translateY(-300%);
-  }
-
-  85% {
-    -webkit-transform: translateY(-402%);
-    transform: translateY(-402%);
-  }
-
-  100% {
-    -webkit-transform: translateY(-400%);
-    transform: translateY(-400%);
-  }
-}*/
-
 #navbar-default a {
   color: #fff;
   text-align: center;
@@ -603,7 +546,7 @@ min-height: 85vh;
   font-family: 'Roboto', 'Segoe UI', sans-serif;
   color: var(--color);
   height: auto;
-  min-height: 80vh;
+  min-height: 90vh;
   background-color: transparent;
   background-image: linear-gradient(257deg, #a64003 0%, #ff7f2a 100%);
   border-radius: 0px 40px 0px 0px;
@@ -675,17 +618,7 @@ min-height: 85vh;
   line-height: 23px;
 }
 
-.sticky .card.contact-box.email {
-  width: 35%;
-}
-
-.sticky .card {
-  transition: transform 0.3s; 
-}
-
-.sticky .card:hover {
-  transform: scale(1.2); 
-}
+  /*   ---------------------*/
 
 .sticky {
   display: flex;
@@ -695,81 +628,548 @@ min-height: 85vh;
   color: black !important;
 }
 
-.card {
-  width: 250px;
-  height: 150px;
-  background: #fbfbfb;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
-  cursor: pointer;
+/*                   */
+
+
+
+/* From Uiverse.io by laminelawal */ 
+.phoneContainer {
+  width: 150px;
+  height: 250px;
+  background-color: black;
   border-radius: 20px;
-}
-.card p {
-  z-index: 1;
-  color: black; 
-  font-size: 1em;
-}
-
-.card .fcolor {
-  z-index: 1;
-  font-size: 2em;
-  margin:10px;
-}
-
-.card .text {
-  z-index: 1;
-  font-size: 1em;
-  margin-top: -15px;
-}
-
-.card::before {
-  content: '';
-  position: absolute;
-  width: 100px;
-  background-image: linear-gradient(180deg, #FF0054, #390099);
-  height: 305%;
-  animation: rotBGimg 3s linear infinite;
-  transition: all 0.2s linear;
-}
-
-.move{
   position: relative;
-  right: 25px;
 }
 
-.fa-envelope{
-  color: #1a84d1;
-}
-
-.fa-map-marker{
-  color: red;
-}
-
-.fa-mobile{
-  color: grey;
-}
-
-@keyframes rotBGimg {
-  from {
-      transform: rotate(0deg);
-  }
-
-  to {
-      transform: rotate(360deg);
-  }
-}
-
-.card::after {
-  content: '';
+.screen {
+  width: 145px;
+  height: 240px;
+  background: rgb(255,196,196);
+  background: linear-gradient(167deg, rgba(255,196,196,1) 10%, rgba(45,138,253,1) 20%, rgba(34,193,195,1) 48%, rgba(211,216,255,1) 69%, rgba(0,164,24,1) 88%);
+  border-radius: 20px;
   position: absolute;
-  background: WHITE;
-  inset: 5px;
-  border-radius: 15px;
-}   
+  top: 4px;
+  bottom: 2px;
+  right: 2px;
+  left: 2px;
+  box-sizing: border-box;
+}
+
+.camera {
+  width: 60px;
+  background-color: black;
+  position: absolute;
+  height: 14px;
+  top: 7%;
+  right: 49%;
+  transform: translate(50%, -50%);
+  border-radius: 25px;
+  transition: 0.3s;
+  animation-name: callTransition;
+  animation-duration: 1.9s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease;
+}
+
+@keyframes callTransition {
+  15% {
+    width: 40px;
+  }
+
+  95% {
+    width: 95px;
+    background-color: darkblue;
+  }
+}
+
+.camera:before {
+  content: "";
+  width: 13px;
+  height: 9px;
+  background-color: rgb(19, 19, 51);
+  position: absolute;
+  border-radius: 50%;
+  left: 5px;
+  top: 2px;
+}
+
+.camera:after {
+  content: "";
+  width: 5px;
+  height: 5px;
+  background-color: lightgreen;
+  position: absolute;
+  border-radius: 50%;
+  right: 5px;
+  top: 4px;
+}
+
+.appsContainer {
+  margin-top: 40px;
+  position: absolute;
+  right: 50%;
+  top: 29%;
+  transform: translate(50%, -50%);
+}
+
+.widgets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+.one, .two {
+  height: 45px;
+  width: 50px;
+  background-color: blue;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.two {
+  background-color: lightblue;
+}
+
+.oneApp, .twoApp {
+  width: 25px;
+  height: 25px;
+  background-color: white;
+  border-radius: 5px;
+  margin-top: 6px;
+}
+
+.apps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin-top: 15px;
+  margin-left: 5px;
+}
+
+.menuBar {
+  display: flex;
+  border-radius: 20px;
+  position: absolute;
+  bottom: -48px;
+}
+
+.menuBar .twoApp:not(:last-child) {
+  margin-right: 2px;
+}
+
+.menuBar::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 13px;
+  background-color: lightgray;
+  border: none;
+  border-radius: 20px;
+  top: -5px;
+  right: 50%;
+  transform: translate(50%, -50%);
+}
+
+.menuBar::before {
+  content: "°°°°°°";
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bolder;
+  color: gray;
+}
+
+
+/*                  */
+
+/* From Uiverse.io by Smit-Prajapati */ 
+.card {
+  width: 300px;
+  height: 228px;
+  position: relative;
+  top:10px;
+  background: #243137;
+  position: relative;
+  display: grid;
+  place-content: center;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+
+#logo-main, #logo-second {
+  height: 100%;
+}
+
+#logo-main {
+  fill: #bd9f67;
+}
+
+#logo-second {
+  padding-bottom: 10px;
+  fill: none;
+  stroke: #bd9f67;
+  stroke-width: 1px;
+}
+
+.border {
+  position: absolute;
+  inset: 0px;
+  border: 2px solid #bd9f67;
+  opacity: 0;
+  transform: rotate(10deg);
+  transition: all 0.5s ease-in-out;
+}
+
+.bottom-text {
+  position: absolute;
+  left: 50%;
+  bottom: 13px;
+  transform: translateX(-50%);
+  font-size: 6px;
+  text-transform: uppercase;
+  padding: 0px 5px 0px 8px;
+  color: #bd9f67;
+  background: #243137;
+  opacity: 0;
+  letter-spacing: 7px;
+  transition: all 0.5s ease-in-out;
+}
+
+.content {
+  transition: all 0.5s ease-in-out;
+}
+
+.content .logo {
+  height: 35px;
+  position: relative;
+  width: 33px;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+
+.content .logo .logo1 {
+  height: 33px;
+  position: absolute;
+  left: 0;
+}
+
+.content .logo .logo2 {
+  height: 33px;
+  position: absolute;
+  left: 33px;
+}
+
+.content .logo .trail {
+  position: absolute;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+}
+
+.content .logo-bottom-text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 30px;
+  color: #bd9f67;
+  padding-left: 8px;
+  font-size: 11px;
+  opacity: 0;
+  letter-spacing: none;
+  transition: all 0.5s ease-in-out 0.5s;
+}
+
+.card:hover {
+  border-radius: 0;
+  transform: scale(1.1);
+}
+
+.card:hover .logo {
+  width: 134px;
+  animation: opacity 1s ease-in-out;
+}
+
+.card:hover .border {
+  inset: 15px;
+  opacity: 1;
+  transform: rotate(0);
+}
+
+.card:hover .bottom-text {
+  letter-spacing: 3px;
+  opacity: 1;
+  transform: translateX(-50%);
+}
+
+.card:hover .content .logo-bottom-text {
+  opacity: 1;
+  letter-spacing: 9.5px;
+}
+
+.card:hover .trail {
+  animation: trail 1s ease-in-out;
+}
+
+@keyframes opacity {
+  0% {
+    border-right: 1px solid transparent;
+  }
+
+  10% {
+    border-right: 1px solid #bd9f67;
+  }
+
+  80% {
+    border-right: 1px solid #bd9f67;
+  }
+
+  100% {
+    border-right: 1px solid transparent;
+  }
+}
+
+@keyframes trail {
+  0% {
+    background: linear-gradient(90deg, rgba(189, 159, 103, 0) 90%, rgb(189, 159, 103) 100%);
+    opacity: 0;
+  }
+
+  30% {
+    background: linear-gradient(90deg, rgba(189, 159, 103, 0) 70%, rgb(189, 159, 103) 100%);
+    opacity: 1;
+  }
+
+  70% {
+    background: linear-gradient(90deg, rgba(189, 159, 103, 0) 70%, rgb(189, 159, 103) 100%);
+    opacity: 1;
+  }
+
+  95% {
+    background: linear-gradient(90deg, rgba(189, 159, 103, 0) 90%, rgb(189, 159, 103) 100%);
+    opacity: 0;
+  }
+}
+
+  /* ---------------------*/
+
+
+/* localisation */
+
+/* From Uiverse.io by SnyDeTreves */ 
+/*************/
+/* Variables */
+/*************/
+
+.map-container {
+  --city-radius: 2rem;
+  --city-sign-color-back: #00c080;
+  --city-sign-color-font: #fff;
+  --city-pin-size-font: 1.2rem;
+}
+
+/**********/
+/* Styles */
+/**********/
+
+/* Container */
+.map-container {
+  border-radius: 0.5em;
+  box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.5);
+  line-height: 1;
+  min-width: 15rem;
+  position: relative;
+  width: 15%;
+  aspect-ratio: 1;
+}
+
+/* Map - Background */
+.map-background {
+  border-radius: inherit;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+/* Map - Cities */
+.map-cities {
+  width: 100%;
+}
+.map-city {
+  border-radius: var(--city-radius);
+  left: calc(var(--x) * 1% - var(--city-radius));
+  padding: var(--city-radius);
+  position: absolute;
+  top: calc(var(--y) * 1% - var(--city-radius));
+}
+.map-city::after,
+.map-city::before {
+  font-size: var(--city-pin-size-font);
+}
+.map-city::before {
+  content: "•";
+  left: calc(-50% + var(--city-radius));
+  position: absolute;
+  top: calc(-0.65em + var(--city-radius));
+  text-align: center;
+  text-shadow: 0 1px 1px #000;
+  width: 100%;
+}
+.map-city::after {
+  clip-path: inset(-0.5em 0 0 0);
+  content: "📍";
+  left: calc(-50% + var(--city-radius));
+  position: absolute;
+  top: calc(-1em + var(--city-radius));
+  text-align: center;
+  transition: all 300ms ease-out;
+  width: 100%;
+  z-index: var(--y);
+}
+
+/* Map - Sign */
+.map-city__label {
+  display: none;
+  left: calc(-5em + 50%);
+  position: absolute;
+  text-align: center;
+  width: 18em;
+  z-index: 999;
+}
+.map-city__sign {
+  align-items: center;
+  background-color: var(--city-sign-color-back);
+  border-radius: 0.2rem;
+  border: 0.15em solid var(--city-sign-color-font);
+  box-shadow: 0 0 3px #000;
+  color: var(--city-sign-color-font);
+  column-gap: 0.3em;
+  display: flex;
+  font-weight: 700;
+  justify-content: center;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 0.4em 0.6em 0.4em 0.3em;
+  text-overflow: ellipsis;
+  text-wrap: nowrap;
+  width: max-content;
+}
+.map-city__sign::before {
+  content: attr(data-icon);
+}
+
+/************/
+/* Tracking */
+/************/
+
+/* Map - Cities */
+.map-city:hover::after {
+  clip-path: inset(-0.5em 0 0.5em 0);
+  transform: translateY(0.5em);
+}
+
+/* Map - Sign */
+.map-city:hover .map-city__label {
+  animation: fadein 300ms forwards ease-out;
+  display: block;
+}
+
+.map-city:hover .map-city__sign.anim::before {
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+.map-city:hover .map-city__sign.anim-grow::before {
+  animation-name: grow;
+  animation-timing-function: ease-in;
+}
+.map-city:hover .map-city__sign.anim-slidein::before {
+  animation-name: slidein;
+  animation-timing-function: ease-out;
+}
+
+/**************/
+/* Animations */
+/**************/
+
+/* Fade in from top */
+@keyframes fadein {
+  0% {
+    opacity: 0;
+    top: calc(var(--city-radius));
+  }
+
+  100% {
+    opacity: 1;
+    top: calc(var(--city-radius) + var(--city-pin-size-font) / 2);
+  }
+}
+
+/* Grow from the ground */
+@keyframes grow {
+  0% {
+    transform: translate(0, 200%);
+  }
+
+  10% {
+    transform: translate(5%, 180%);
+  }
+
+  20% {
+    transform: translate(-10%, 160%);
+  }
+
+  30% {
+    transform: translate(15%, 140%);
+  }
+
+  40% {
+    transform: translate(-5%, 120%);
+  }
+
+  50% {
+    transform: translate(10%, 100%);
+  }
+
+  60% {
+    transform: translate(-15%, 80%);
+  }
+
+  70% {
+    transform: translate(5%, 60%);
+  }
+
+  80% {
+    transform: translate(0, 40%);
+  }
+
+  90% {
+    transform: translate(0, 20%);
+  }
+
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Slide in from left */
+@keyframes slidein {
+  0% {
+    transform: translateX(-200%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+/* fin localisation */
 
 /* end contact */
 
