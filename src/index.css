@@ -406,7 +406,7 @@ background-repeat: no-repeat; /* Évite la répétition de l'image */
 
 .mon-text{
   width: 90%;
-  position: relative;
+  position: inherit;
   top: 80px;
 }
 
