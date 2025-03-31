@@ -12,7 +12,7 @@ const Contact = () => {
           <p className='contact-t'><strong className='degrade'>VOUS VOULEZ RENCO</strong>NTREZ UN JEUNE TALENT ? <strong className='degrade'>CONTACTEZ MOI</strong></p>
           Actuellement à la recherche d'une opportunité d'alternance, je suis intéressée par les postes en : <br />
         <div class="jobs">
-          <p className='contact-t'> DÉVELOPPEMENT <strong className='degrade'>• DATA •</strong> GESTION DE PROJET</p>
+          <p className='contact-t'> DÉVELOPPEMENT <strong className='degrade'>• BIG DATA • INTELLIGENCE</strong> ARTIFICIELLE</p>
         </div>
       </div>
 
